@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Project Documentation</title>
+			<style>
+				p {
+					word-wrap: break-word;
+					width: 50%;
+					margin-left: 20px;
+				}
+				
+				ul {
+					type: disc;
+					width: 50%;
+				}
+				
+				ul ul {
+					type: disc;
+					width: 100%;
+				}
+				
+				ol {
+					width: 50%;
+				}
+			</style>
+		</head>
+		<body>
+			<h1>Description</h1>
+			<p>
+				One of the most widespread methods of communication is through social networks.
+				When the user first visits the website, he/she will be greeted with a simple Login/Register page.
+				Once the user creates an account, he/she will have the ability to converse and interact with the
+				many other users in a friendly environment. They can share interests, ideas, and hobbies in the
+				main page, where users can post, comment on other posts, as well as "liking/smiling" other posts. 
+				Every user also has a personally generated profile page, where he/she can populate an "About Me" 
+				section with "what's cool about them". 
+			</p>
+			
+			<h1>Personnel</h1>
+			<p>
+				Cesar Mu, Period 2, Missing 1 <br>
+				Nicholas Pustilnik, Period 4, Missing 2
+				<br><br>
+				Time split: ~8 hours Nick, ~9 hours Cesar
+			</p>
+			
+			<h1>Citations</h1>
+			
+			<h2>programming</h2>
+			<p>
+				<ul>
+					<li>The navigation bar that appears on top of each page is created with help from W3Schools,
+						namely the section "CSS Navigation Bar". 
+						<a href="http://www.w3schools.com/css/css_navbar.asp">Link</a>
+					</li>
+					<li>The post-tables template is created with help from W3Schools, namely the section "CSS Tables".
+						<a href="http://www.w3schools.com/css/css_table.asp">Link</a>
+					</li>
+					<li>The various forms/inputs/buttons were created with help from W3Schools, namely the section
+						"CSS Forms".
+						<a href="http://www.w3schools.com/css/css_form.asp">Link</a>
+					</li>
+					<li>The "time" and "strftime("%Y-%m-%d %H:%M:%S")" functions were learned from a thread in StackOverFlow</li>
+				</ul>
+			</p>
+			
+			<h2>data sources</h2>
+			<p>
+				<ul>
+					<li>The "smile" emoji that appears in the post-likes section of every post as well as in the
+						shortcut icon is taken from
+						<a href="http://emojipedia-us.s3.amazonaws.com/cache/6f/d2/6fd235e651955b1a9768561dd0450e1f.png">here</a>
+					</li>
+				</ul>
+			</p>
+			
+			<h1>Desirable features, with time estimates</h1>
+			<p>
+				<b>Future features:</b>
+				<table border="1" style="width: 50%; table-layout: auto; margin-left: 20px;" cellpadding="5px">
+					<tr>
+						<th>Feature</th>
+						<th>Time estimate</th>
+					</tr>
+					<tr>
+						<td>A personal messaging system in which users can interact privately with another user</td>
+						<td>1.5 hours</td>
+					</tr>
+					<tr>
+						<td>A friend system in which users can add each other as buddies, with a list of friends
+							that shows up on the user's profile page</td>
+						<td>1.5 hours</td>
+					</tr>
+					<tr>
+						<td>A profile picture system in which users can upload a picture to their profile page</td>
+						<td>1 hour</td>
+					</tr>
+					<tr>
+						<td>User posts/comments that show their profile picture as an adjacent small icon</td>
+						<td>1 hour</td>
+					</tr>
+					<tr>
+						<td>When the user comments/likes a post near the bottom of the main page, the newly generated
+							main page will automatically scroll down</td>
+						<td>??? No clue how to do this</td>
+					</tr>
+				</table>
+			</p>
+			
+			<h1>Achievements</h1>
+			<p>
+				<ul>
+					<li>The user can first login or register. Python will either check for
+						the validity of the username/password, or will append a new record to profiles.csv</li>
+					<li>A navigation bar appears on top of each page, with links to "Home", "My Profile", "Settings",
+						and "Logout"</li>
+					<li>Main Page
+						<ul>
+							<li>The user can view the main page with posts/likes/comments that is generated from mainpage.csv
+								by clicking "Home" in the navigation bar</li>
+							<li>The user can create a new post, which when submitted will appear on the main page and
+								will be added to mainpage.csv</li>
+							<li>The user can comment on posts, which when submitted will appear under the post and will
+								be added to mainpage.csv</li>
+							<li>The user can like posts by clicking on the smile emoji under the post; the username will appear
+								in the likes section under the post and will be added to mainpage.csv</li>
+							<li>Each post/comment is accompanied with the time/date of submission</li>
+							<li>Each post/comment has the submitter's username, which when clicked, will direct the user
+								to the submitter's profile page</li>
+						</ul>
+					</li>
+					<li>Profile Pages
+						<ul>
+							<li>Profile pages can be generated from profiles.csv for each user</li>
+							<li>The profile page includes data such as username, first name, and an editable "About Me"</li>
+							<li>The user can view his/her own profile page by clicking "My Profile" in the navigation bar</li>
+							<li>The user can view other user's profile pages by clicking their usernames in posts/comments</li>
+							<li>The user can edit only his/her own "About Me" section</li>
+						</ul>
+					</li>
+					<li>Settings Page
+						<ul>
+							<li>The user can view an account settings page by clicking "Settings" in the navigation bar</li>
+							<li>The user can edit his/her first name and password</li>
+						</ul>
+					</li>
+					<li>Miscellaneous
+						<ul>
+							<li>The user is kept logged in, even when clicking to a different page. This is accomplished using
+								a system of forms and hidden inputs. This does raise a security issue because the username/password
+								is viewable in the HTML page source</li>
+						</ul>
+					</li>
+				</ul>
+			</p>
+				
+			<h2>Features of note</h2>
+			<p>
+				<ul>
+					<li>The user can only edit his/her own "About Me" section of their profile page. If the user is viewing another
+						user's profile page, the edit form will be grayed out</li>
+					<li>The user can go to other profile pages by clicking the username links (actually they are forms) in posts/comments</li>
+					<li>The user can "smile" a post by clicking the smile emoji, which adds their username to the section. Clicking
+						the smile emoji again will "un-smile" the post, removing the username from the section</li>
+					<li>The mainpage.csv and profiles.csv uses various, unique ways of separating fields. Pipelines ("|") are
+						used to separate the "main" fields, **!!** 's are used as newlines, and $%$% 's are used to separate fields
+						in comments. These unique separators allow the user to submit newlines, commas, and almost any other character
+						(though we have limited some of the user's freedom in submissions). You can view these CSV files at
+						<i>/home/students/2018/cesar.mu/projectHiddenFiles</i></li>
+					<li>The user is always kept logged in (except when clicking "Logout") through a system of forms and hidden inputs.
+						Every link/button is actually a form with hidden inputs for username and password. When Python generates the page,
+						it replaces each hidden input placeholder with the user's account info. (This introduces a security issue)</li>
+					<li>The time/date that is added with every post/comment allows the posts/comments to be sorted in reverse order
+						(newest shows first)</li>
+					<li>When editing First name or password in the Settings page, a red message will show up when the user tries to include
+						an "|" or "**!!**" in his/her new name/password</li>
+				</ul>
+			</p>
+			
+			<h2>Learning</h2>
+			<p>
+				<ul>
+					<li>Use of the "time" module, specifically the "strftime" function within that module. The use of "strftime("%Y-%m-%d %H:%M:%S")"
+						allows for the generation of time/date for each post/comment</li>
+					<li>The .join() function allows a list to be converted into a string</li>
+					<li>We learned CSS that allowed our pages to look more attractive. For example, the buttons change in appearance when hovered
+						over!</li>
+					<li>We learned about the importance of HTML templates and separate Python modules</li>
+					<li>Use of the "textarea" input element as well as "required" and "disabled" attributes for various inputs</li>
+				</ul>
+			</p>
+			
+			<h1>Next Steps, with time estimates</h1>
+			<p>
+				<ul>
+					<li>Cut-off Time: Sunday 6/12/16 @ 8pm.</li>
+				</ul>
+				<b>Future features:</b>
+				<ol>
+					<li>Create a messaging system, editing Python, HTML, and the profiles.csv files...1.5 hours</li>
+					<li>Create a buddy system, editing Python, HTML, and the profiles.csv files...1.5 hours</li>
+					<li>Create a profile picture upload system, editing Python, HTML, and the profiles.csv files...1 hour</li>
+					<li>Patch the bug of usernames containing certain special characters (such as the pound sterling &#163...0.5 hours</li>
+					<li>Find a new way of keeping the user logged in, without introducing the security issue of having the username/password
+						in the HTML source</li>
+				</ol>
+			</p>
+			
+			<h1>Finished steps, identified by worker</h1>
+			<p>
+				<table border="1" style="width: 50%; table-layout: auto; margin-left: 20px;" cellpadding="5px">
+					<tr>
+						<th>Finished steps (some steps are actually many steps grouped into one)</th>
+						<th>Worker</th>
+					</tr>
+					<tr>
+						<td>Create CSV files for storing posts data and user data (mainpage.csv and profiles.csv)</td>
+						<td>Nicholas</td>
+					</tr>
+					<tr>
+						<td>Create python code for logging into an existing account and registering a new account</td>
+						<td>Cesar</td>
+					</tr>
+					<tr>
+						<td>Create HTML templates for main page post tables, as well as the comment tables/forms</td>
+						<td>Both</td>
+					</tr>
+					<tr>
+						<td>Create python code that takes data from mainpage.csv and generates post tables for the main page</td>
+						<td>Nicholas</td>
+					</tr>
+					<tr>
+						<td>Create python code to generate comment sections</td>
+						<td>Cesar</td>
+					</tr>
+					<tr>
+						<td>Create python code for appending new post data to mainpage.csv</td>
+						<td>Cesar</td>
+					</tr>
+					<tr>
+						<td>Create HTML login/register page</td>
+						<td>Nicholas</td>
+					</tr>
+					<tr>
+						<td>Create HTML template for profile pages</td>
+						<td>Nicholas</td>
+					</tr>
+					<tr>
+						<td>Create python code for generating profile pages from data from profiles.csv</td>
+						<td>Nicholas</td>
+					</tr>
+					<tr>
+						<td>Create HTML/python code for editing personal "About Me's"</td>
+						<td>Both</td>
+					</tr>
+					<tr>
+						<td>Create python code for viewing other user's profile pages</td>
+						<td>Cesar</td>
+					</tr>
+					<tr>
+						<td>Create HTML/python code for editing account settings (owner and password)</td>
+						<td>Nicholas</td>
+					</tr>
+					<tr>
+						<td>Create HTML/python code for smiling/un-smiling posts</td>
+						<td>Cesar</td>
+					</tr>
+					<tr>
+						<td>Create HTML/python code for the navigation bar on each page</td>
+						<td>Cesar</td>
+					</tr>
+					<tr>
+						<td>Organize and fix up some spaghetti code</td>
+						<td>Cesar</td>
+					</tr>
+				</table>
+			</p>
+			
+			<h1>Bugs</h1>
+			<p>
+				<ul>
+					<li>If the user reloads and confirms form resubmission after submitting a new post or comment, the post/comment will be
+						submitted again, creating 2 identical submissions</li>
+					<li>If the username associated with a comment is too long, it will be cut off in the link. This can be seen as being
+						intentional, as the username/link won't overlap with the comment content.</li>
+					<li>The use of certain characters as usernames/passwords/etc. will cause the user to be logged out whenever he/she visits
+						a different page. One such character is the pound sterling ("&#163" or "& #163"). Credit goes to Austin Leung for finding this
+						bug.</li>
+				</ul>
+			</p>
+
+
+		</body>
+	</html>

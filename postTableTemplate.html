@@ -1,0 +1,49 @@
+<table class="mainPost" id="TIMEDATE">
+	<tr>
+		<td class="userTime">
+			<form action="main.py" method="POST">
+				<input class="link" type="submit" value="USERNAME">
+				<input type="hidden" name="userAction" value="OtherProfile">
+				<input type="hidden" name="username" value="LOGGEDINUSER">
+				<input type="hidden" name="password" value="LOGGEDINPASS">
+				<input type="hidden" name="viewProfileUsername" value="USERNAME">
+				 @ TIMEDATE
+			</form>
+		</td>
+	</tr>
+	<tr>
+		<td class="postContent">POSTCONTENT</td>
+	</tr>
+	<tr>
+		<td class="postLikes">
+			<form action="main.py" method="POST">
+				<input type="image" src="smileemoji.jpg" alt="smileybutton" height="20" style="vertical-align: middle;">
+				<input type="hidden" name="userAction" value="LikePost">
+				<input type="hidden" name="username" value="LOGGEDINUSER">
+				<input type="hidden" name="password" value="LOGGEDINPASS">
+				<input type="hidden" name="postTimeDate" value="POSTINGTIME">
+				LIKESRECEIVED
+			</form>
+				<!-- <img style="vertical-align: middle;" src="smileemoji.jpg" alt="smiley" height="20"> -->
+		</td>
+	</tr>
+	<tr>
+		<td class="commentForm">
+			<form action="main.py" method="POST">
+				<textarea class="newComment" name="commentContent" placeholder="Write a comment..." wrap="soft" required maxlength="500"></textarea>
+				<input class="button" type="submit" name="userAction" value="Comment">
+				<input type="hidden" name="username" value="LOGGEDINUSER">
+				<input type="hidden" name="password" value="LOGGEDINPASS">
+				<input type="hidden" name="postTimeDate" value="POSTINGTIME">
+			</form>
+		</td>
+	</tr>
+	<tr>
+		<td class="commentSection">
+			<table class="commentTable">
+				COMMENTSECTION
+			</table>
+		</td>
+	</tr>
+</table>
+<br><br>

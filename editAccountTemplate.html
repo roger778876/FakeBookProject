@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Edit LOGGEDINUSER</title>
+			<link rel="shortcut icon" type="image/jpg" href="smileemoji.jpg">
+			<style type="text/css">
+				body {
+					font-family: Arial, Sans-serif;
+				}
+			
+				ul {
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					overflow: hidden;
+					background-color: #89bdd3;
+					width: 40%;
+					margin-left: 30%;
+					margin-right: 30%;
+				}
+
+				li {
+					float: left;
+				}
+				
+				li input {
+					display: block;
+					color: white;
+					text-align: center;
+					padding: 14px 16px;
+					text-decoration: none;
+					background-color: #89bdd3;
+					border: 0px;
+					font-size: medium;
+				}
+
+				li input:hover {
+					background-color: #9ad3de;
+					cursor: pointer;
+				}
+				
+				table.profileInfo {
+					width: 40%;
+					margin-left: 30%;
+					margin-right: 30%;
+					table-layout: fixed;
+					border-collapse: collapse;
+					border-top: 3px solid black;
+					border-bottom: 3px solid black;
+					background-color: white;
+				}
+				
+				table.profileInfo td.username {
+					word-wrap: break-word;
+					font-size: 40px;
+					text-align: left;
+					vertical-align: top;
+					padding: 10px;
+					border-bottom: 1px solid #ddd;
+				}
+				
+				table.profileInfo td.edit {
+					width: 30%;
+					word-wrap: break-word;
+					font-size: x-large;
+					text-align: left;
+					vertical-align: middle;
+					padding: 10px;
+					border-bottom: 1px solid #ddd;
+				}
+			
+				table.profileInfo td.forms {
+					padding: 10px;
+					width: 50%;
+					text-align: left;
+					vertical-align: middle;
+					word-wrap: break-word;
+				}
+
+				input.edit {
+					width: 75%;
+					font-size: medium;
+					border: 2px solid #9ad3de;
+					box-sizing: border-box;
+					height: 27px;
+				}
+				
+				input.button {
+					background-color: #89bdd3;
+					border: 1px solid #9ad3de;
+					color: white;
+					padding: 5px 10px;
+					cursor: pointer;
+					font-size: small;
+				}
+				
+				input.button:hover {
+					background-color: #9ad3de;
+					border: 1px solid #9ad3de;
+					color: white;
+					padding: 5px 10px;
+					cursor: pointer;
+					font-size: small;
+					cursor: pointer;
+				}
+			</style>
+		</head>
+		<body bgcolor="EFF1F3">
+			<ul>
+				<li>
+					<form action="main.py" method="POST">
+						<input type="submit" name="userAction" value="Home">
+						<input type="hidden" name="username" value="LOGGEDINUSER">
+						<input type="hidden" name="password" value="LOGGEDINPASS">
+					</form>
+				</li>
+				<li>
+					<form action="main.py" method="POST">
+						<input type="submit" value="My Profile">
+						<input type="hidden" name="userAction" value="Profile">
+						<input type="hidden" name="username" value="LOGGEDINUSER">
+						<input type="hidden" name="password" value="LOGGEDINPASS">
+					</form>
+				</li>
+				<li>
+					<form action="main.py" method="POST">
+						<input type="submit" value="Settings">
+						<input type="hidden" name="userAction" value="editAccount">
+						<input type="hidden" name="username" value="LOGGEDINUSER">
+						<input type="hidden" name="password" value="LOGGEDINPASS">
+					</form>
+				</li>
+				<li style="float: right;">
+					<form action="http://bart.stuy.edu/~cesar.mu/project/"><input type="submit" value="Logout"></form>
+				</li>
+			</ul>
+			<br>
+			<table class="profileInfo">
+				<tr>
+					<td class="username">LOGGEDINUSER</td>
+					<td class="edit">Edit Account</td>
+				</tr>
+				<tr>
+					<td class="forms">
+						<form action="main.py" method="POST">
+							<input class="edit" type="textbox" name="editOwner" placeholder="OWNERNAME" required>
+							<input class="button" type="submit" value="Edit">
+							<input type="hidden" name="userAction" value="editOwner">
+							<input type="hidden" name="username" value="LOGGEDINUSER">
+							<input type="hidden" name="password" value="LOGGEDINPASS">
+						</form>
+						<br>
+						<form action="main.py" method="POST">
+							<input class="edit" type="password" name="editPassword" placeholder="New password" required>
+							<input class="button" type="submit" value="Edit">
+							<input type="hidden" name="userAction" value="editPassword">
+							<input type="hidden" name="username" value="LOGGEDINUSER">
+							<input type="hidden" name="password" value="LOGGEDINPASS">
+						</form>
+					</td>
+					<td style="vertical-align:top; text-align: left; padding: 10px;"><font color="red">MESSAGE</font></td>
+				</tr>
+			</table>
+		</body>
+	</html>

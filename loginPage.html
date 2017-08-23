@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Login</title>
+			<style type="text/css">
+				body {
+					font-family: Arial, Sans-serif;
+				}
+			
+				table {
+					width: 30%;
+					margin-left: 35%;
+					margin-right: 35%;
+					table-layout: fixed;
+					border-collapse: collapse;
+					border: 2px solid black;
+					background-color: white;
+				}
+				
+				table td {
+					width: 100%;
+					word-wrap: break-word;
+					padding: 10px;
+					font-size: large;
+				}
+				
+				input[type=textbox], input[type=password] {
+					width: 100%;
+					border: 2px solid #9ad3de;
+					padding: 10px;
+					margin-bottom: 5px;
+					box-sizing: border-box;
+					font-size: large;
+					
+				}
+				
+				input[type=textbox]:focus, input[type=password]:focus {
+					width: 100%;
+					border: 2px solid #89bdd3;
+					padding: 10px;
+					margin-bottom: 5px;
+					box-sizing: border-box;
+					font-size: large;
+					
+				}
+				
+				input.button {
+					background-color: #89bdd3;
+					border: 1px solid #9ad3de;
+					color: white;
+					padding: 10px 30px;
+					margin-top: 5px;
+					cursor: pointer;
+					font-size: medium;
+				}
+				
+				input.button:hover {
+					background-color: #9ad3de;
+					border: 1px solid #9ad3de;
+					color: white;
+					padding: 10px 30px;
+					margin-top: 5px;
+					cursor: pointer;
+					font-size: medium;
+				}
+			</style>
+		</head>
+		<body bgcolor="EFF1F3">
+			<br>
+			<table>
+				<tr>
+					<td>Login</td>
+				</tr>
+				<tr>
+					<td>
+						<form action="main.py" method="POST">
+							<input type="textbox" name="username" placeholder="Username" required>
+							<br>
+							<input type="password" name="password" placeholder="Password" required>
+							<br>
+							<input class="button" type="submit" name="userAction" value="Login">
+						</form>
+					</td>
+				</tr>
+			</table>
+			
+			<br>
+			<table>
+				<tr>
+					<td>Register</td>
+				</tr>
+				<tr>
+					<td>
+						<form action="main.py" method="POST">
+							<input type="textbox" name="newUsername" placeholder="Username" required>
+							<br>
+							<input type="password" name="newPassword" placeholder="Password" required>
+							<br>
+							<input type="textbox" name="newOwner" placeholder="First name" required>
+							<br>
+							<input class="button" type="submit" name="userAction" value="Create">
+						</form>
+					</td>
+				</tr>
+			</table>
+			
+			<footer>
+				<center>
+					<p>Created by Cesar Mu pd. 2 & Nicholas Pustilnik pd. 4<br>MKS22 - Mr. Holmes</p>
+				</center>
+			</footer>
+		</body>
+	</html>
